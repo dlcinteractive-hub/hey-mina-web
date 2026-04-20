@@ -1,0 +1,163 @@
+/* hey-mina.com — shared styles */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Titan+One&display=swap');
+
+:root {
+  --purple: #8B5CF6;
+  --pink: #F472B6;
+  --dark: #1a1a1a;
+  --text: #1a1a1a;
+  --text-secondary: #6B7280;
+  --bg-start: #FDF2F8;
+  --bg-end: #EDE9FE;
+  --white: #ffffff;
+  --green: #10B981;
+  --red: #EF4444;
+  --gold: #F59E0B;
+  --blue: #3B82F6;
+  --radius: 20px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Baloo 2', system-ui, sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, var(--bg-start), var(--bg-end));
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { font-family: 'Titan One', cursive; font-weight: 400; line-height: 1.2; }
+
+a { color: var(--purple); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+img { max-width: 100%; height: auto; }
+
+/* ── Layout ── */
+.container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+/* ── Nav ── */
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 24px; max-width: 900px; margin: 0 auto;
+}
+.nav-logo { font-family: 'Titan One', cursive; font-size: 22px; color: var(--purple); }
+.nav-logo span { color: var(--pink); }
+.nav-links { display: flex; gap: 24px; }
+.nav-links a { font-weight: 600; color: var(--text-secondary); font-size: 15px; }
+.nav-links a:hover { color: var(--purple); text-decoration: none; }
+
+/* ── Hero ── */
+.hero {
+  text-align: center; padding: 80px 24px 60px;
+  max-width: 700px; margin: 0 auto;
+}
+.hero-emoji { font-size: 72px; margin-bottom: 16px; }
+.hero h1 { font-size: 48px; color: var(--text); margin-bottom: 12px; }
+.hero h1 span { background: linear-gradient(135deg, var(--purple), var(--pink)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.hero .tagline { font-size: 22px; color: var(--text-secondary); font-weight: 600; margin-bottom: 32px; }
+.hero .description { font-size: 17px; color: var(--text-secondary); max-width: 520px; margin: 0 auto 40px; }
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 16px 32px; border-radius: 16px; font-size: 17px;
+  font-family: 'Baloo 2', sans-serif; font-weight: 700;
+  border: 3px solid var(--dark); cursor: pointer; transition: transform 0.15s;
+}
+.btn:hover { transform: translateY(-2px); text-decoration: none; }
+.btn-primary { background: linear-gradient(135deg, var(--purple), var(--pink)); color: var(--white); }
+.btn-outline { background: var(--white); color: var(--text); }
+
+/* ── Feature Cards ── */
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; padding: 0 24px 60px; max-width: 900px; margin: 0 auto; }
+.feature-card {
+  background: var(--white); border-radius: var(--radius); padding: 28px 24px;
+  border: 3px solid var(--dark); text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.feature-card .emoji { font-size: 40px; margin-bottom: 12px; }
+.feature-card h3 { font-size: 18px; margin-bottom: 8px; color: var(--text); }
+.feature-card p { font-size: 15px; color: var(--text-secondary); }
+
+/* ── Screenshots placeholder ── */
+.screenshots {
+  text-align: center; padding: 60px 24px;
+  max-width: 900px; margin: 0 auto;
+}
+.screenshots h2 { font-size: 32px; margin-bottom: 24px; }
+.screenshot-grid { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+.screenshot-placeholder {
+  width: 180px; height: 360px; background: var(--white);
+  border-radius: 24px; border: 3px solid var(--dark);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-secondary); font-size: 14px; font-weight: 600;
+}
+
+/* ── Page header ── */
+.page-header {
+  text-align: center; padding: 60px 24px 40px;
+  max-width: 700px; margin: 0 auto;
+}
+.page-header h1 { font-size: 36px; margin-bottom: 12px; }
+.page-header p { font-size: 17px; color: var(--text-secondary); }
+
+/* ── Content card ── */
+.content-card {
+  background: var(--white); border-radius: var(--radius); padding: 32px;
+  border: 3px solid var(--dark); margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.content-card h2 { font-size: 22px; margin-bottom: 16px; color: var(--purple); }
+.content-card h3 { font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 16px; margin: 20px 0 8px; color: var(--text); }
+.content-card p, .content-card li { font-size: 15px; color: var(--text-secondary); margin-bottom: 8px; }
+.content-card ul { padding-left: 20px; }
+.content-card li { list-style: disc; }
+
+/* ── FAQ ── */
+.faq-item { border-bottom: 1.5px solid #E5E7EB; padding: 20px 0; }
+.faq-item:last-child { border-bottom: none; }
+.faq-item h3 { font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 16px; color: var(--text); margin-bottom: 8px; }
+.faq-item p { font-size: 15px; color: var(--text-secondary); margin: 0; }
+
+/* ── Contact card ── */
+.contact-card {
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  border-radius: var(--radius); padding: 32px; text-align: center;
+  border: 3px solid var(--dark); margin-bottom: 24px;
+  color: var(--white);
+}
+.contact-card h2 { color: var(--white); margin-bottom: 8px; }
+.contact-card p { color: rgba(255,255,255,0.85); font-size: 15px; }
+.contact-card a { color: var(--white); font-weight: 700; text-decoration: underline; }
+
+/* ── Footer ── */
+.footer {
+  text-align: center; padding: 40px 24px;
+  color: var(--text-secondary); font-size: 14px;
+}
+.footer-links { display: flex; gap: 24px; justify-content: center; margin-bottom: 12px; }
+.footer-links a { color: var(--text-secondary); font-weight: 600; }
+
+/* ── Privacy-specific ── */
+.privacy-section { margin-bottom: 24px; }
+.privacy-section h2 { font-size: 20px; color: var(--purple); margin-bottom: 12px; }
+.privacy-section p { margin-bottom: 12px; }
+.effective-date { font-weight: 700; color: var(--text); }
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 32px; }
+  .hero .tagline { font-size: 18px; }
+  .hero { padding: 60px 20px 40px; }
+  .nav-links { gap: 16px; }
+  .nav-links a { font-size: 14px; }
+  .features { grid-template-columns: 1fr; }
+  .screenshot-placeholder { width: 140px; height: 280px; }
+  .page-header h1 { font-size: 28px; }
+  .content-card { padding: 24px 20px; }
+}
