@@ -20,7 +20,7 @@
 
   <section class="page-header">
     <h1>Privacy Policy</h1>
-    <p class="effective-date">Effective date: April 19, 2026</p>
+    <p class="effective-date">Effective date: November 16, 2026</p>
   </section>
 
   <div class="container">
@@ -44,6 +44,7 @@
           <li><strong>Spelling practice data</strong> — word lists, practice attempts, scores, and response times.</li>
           <li><strong>Math practice data</strong> — multiplication facts practiced, scores, and response times.</li>
           <li><strong>Stars and achievement data</strong> — earned through practice sessions and daily challenges.</li>
+          <li><strong>Writing practice data</strong> — the paragraphs your child writes, the planning notes she enters, every revision she makes, and the feedback the app generates on each one. All versions are kept so you can see how a piece developed; they are visible to you in the app under Profile → Writing.</li>
         </ul>
       </div>
 
@@ -54,7 +55,7 @@
           <li>No location data</li>
           <li>No photos or images (camera is used only for real-time word scanning and images are not stored)</li>
           <li>No device identifiers sold or shared with third parties</li>
-          <li>No social features or user-generated content shared publicly</li>
+          <li>No social features, and nothing your child writes is ever shared publicly or with other families</li>
           <li>No contact lists, messages, or browsing history</li>
         </ul>
       </div>
@@ -67,6 +68,7 @@
           <li>Provide personalized spelling and math practice for each child</li>
           <li>Track learning progress and adapt practice difficulty</li>
           <li>Award stars and track daily challenge completion</li>
+          <li>Generate revision questions on your child's writing, and check that writing is suitable before doing so</li>
           <li>Respond to support requests</li>
         </ul>
         <p>We do not use any collected information for advertising, marketing to children, or profiling.</p>
@@ -78,7 +80,7 @@
         <ul>
           <li>Row-Level Security (RLS) — each family can only access their own data</li>
           <li>Encrypted connections (HTTPS/TLS) for all data in transit</li>
-          <li>No data is stored on the device beyond the current session cache</li>
+          <li>A piece of writing in progress is saved on the device so it is not lost if the app closes; it is removed when the piece is finished</li>
         </ul>
       </div>
 
@@ -87,7 +89,14 @@
         <p>MinaSpark uses the following third-party services to operate:</p>
         <ul>
           <li><strong>Supabase</strong> — database and authentication</li>
-          <li><strong>OpenAI</strong> — text-to-speech for word pronunciation and spelling assistance. No child data is sent to OpenAI; only the word text is transmitted for audio generation.</li>
+          <li><strong>OpenAI</strong> — used for two things:
+            <ol>
+              <li><em>Text-to-speech</em> for word pronunciation and for reading your child's own writing back to her. Only the text to be spoken is sent.</li>
+              <li><em>Writing feedback.</em> When your child submits a piece of writing, the paragraph and the prompt are sent to OpenAI to generate the revision questions she sees, and to OpenAI's moderation service to check the text is suitable before any feedback is produced.</li>
+            </ol>
+            <p>What is sent is the writing, the prompt, and the app's own note of which revision round this is — and nothing else: no name, no account identifier, no device identifier, nothing that identifies the child to OpenAI. The writing itself is free-form, so it may contain details she has chosen to write about.</p>
+            <p>Under OpenAI's API terms, content sent through the API is not used to train their models. OpenAI may retain API inputs and outputs for up to 30 days to provide the service and to identify abuse, after which they are removed from their systems unless OpenAI is legally required to retain them. That is OpenAI's policy, not ours — check it directly if it matters to you.</p>
+          </li>
           <li><strong>Google Cloud Vision</strong> — optical character recognition for scanning printed word lists. Images are processed in real time and are not stored.</li>
         </ul>
         <p>We do not use any advertising SDKs, analytics trackers, or social media integrations.</p>
@@ -97,7 +106,7 @@
         <h2>Parental Rights</h2>
         <p>As a parent or guardian, you have the right to:</p>
         <ul>
-          <li><strong>Review</strong> your child's data — all practice data is visible within the app</li>
+          <li><strong>Review</strong> your child's data — all practice data is visible within the app. Everything she has written, including every revision and the feedback on it, is under Profile → Writing, behind your parent PIN if you have set one.</li>
           <li><strong>Delete</strong> your child's data — delete a child profile from the Profile tab to permanently remove all their data</li>
           <li><strong>Delete your account</strong> — delete your account from within the app (Profile → Delete Account), or contact us at <a href="mailto:support@hey-mina.com">support@hey-mina.com</a>. All data is permanently removed immediately.</li>
           <li><strong>Withdraw consent</strong> — you may stop using the app at any time; contact us to have all data removed</li>
