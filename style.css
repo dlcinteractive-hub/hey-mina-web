@@ -117,6 +117,11 @@ img { max-width: 100%; height: auto; }
 .content-card p, .content-card li { font-size: 15px; color: var(--text-secondary); margin-bottom: 8px; }
 .content-card ul { padding-left: 20px; }
 .content-card li { list-style: disc; }
+/* Nested ordered lists: the rule above sets list-style on every li, which would
+   render a numbered sub-list as discs, and the ul padding rule does not match ol,
+   which would leave it un-indented. */
+.content-card ol { padding-left: 22px; margin-bottom: 8px; }
+.content-card ol li { list-style: decimal; }
 
 /* ── FAQ ── */
 .faq-item { border-bottom: 1.5px solid #E5E7EB; padding: 20px 0; }
